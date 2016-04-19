@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    $(".bf").addClass("hidden");
+    $(".result").addClass("hidden");
+    $(".body-fat-yes").addClass("hidden");
+    $(".body-fat-no").addClass("hidden");
+    $(".pa-factor").addClass("hidden");
+    $(".calculate").addClass("hidden");
+
     var goal = 0;
     var goal_str = "";
     var known_bf = undefined;
