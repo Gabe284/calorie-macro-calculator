@@ -15,7 +15,7 @@ body {
 
 heading {
   font-family: Chunkfive, Bevan, Ultra;
-  font-size: 60px;
+  font-size: 20px;
   display: block;
   padding: 10px;	
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
@@ -27,7 +27,7 @@ heading {
 }
 
 subheading {
-  font-size: 30px;
+  font-size: 16px;
   display: block;
   padding: 10px;
 }
@@ -35,7 +35,7 @@ subheading {
 p {
   color: #000;
   font-family: Georgia;
-  font-size: 30px;
+  font-size: 10px;
 }
 
 main {
@@ -140,3 +140,26 @@ button:hover {
  Change when width < 435. Is in portrait mode
  Change when width < 773. Is in landscape mode.
  */
+@media (min-width: 500px) {
+  heading {
+    font-size: 32px; 
+  }
+  subheading {
+    font-size: 20px; 
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 800px) {
+  heading {
+    font-size: 40px; 
+  }
+  subheading {
+    font-size: 30px; 
+  }
+  p {
+    font-size: 20px;
+  }
+}
