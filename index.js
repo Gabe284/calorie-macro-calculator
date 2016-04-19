@@ -3,7 +3,7 @@ $(document).ready(function(){
     var goal_str = "";
     var known_bf = undefined;
 
-    $(".bf-goal").on("click touchstart", function(){
+    $(".bf-goal").bind("click touchstart", function(){
         $(this).removeClass("inactive");
         $(".mg-goal").addClass("inactive");
         $(".ma-goal").addClass("inactive");
@@ -15,7 +15,7 @@ $(document).ready(function(){
         }
     });
 
-    $(".mg-goal").on("click touchstart", function(){
+    $(".mg-goal").bind("click touchstart", function(){
         $(this).removeClass("inactive");
         $(".bf-goal").addClass("inactive");
         $(".ma-goal").addClass("inactive");
@@ -27,7 +27,7 @@ $(document).ready(function(){
         }
     });
 
-    $(".ma-goal").on("click touchstart", function(){
+    $(".ma-goal").bind("click touchstart", function(){
         $(this).removeClass("inactive");
         $(".bf-goal").addClass("inactive");
         $(".mg-goal").addClass("inactive");
@@ -39,7 +39,7 @@ $(document).ready(function(){
         }
     });
 
-    $(".yes").on("click touchstart", function(){
+    $(".yes").bind("click touchstart", function(){
         $(this).removeClass("inactive");
         $(".no").addClass("inactive");
         $(".body-fat-yes").slideDown(500);
@@ -48,7 +48,7 @@ $(document).ready(function(){
         known_bf = true;
     });
 
-    $(".no").on("click touchstart", function(){
+    $(".no").bind("click touchstart", function(){
         $(this).removeClass("inactive");
         $(".yes").addClass("inactive");
         $(".body-fat-no").slideDown(500);
@@ -141,7 +141,7 @@ $(document).ready(function(){
         return [Math.round(protein), Math.round(carbs), Math.round(fats)]
     }; 
 
-    $(".calculate").on("click touchstart", function(){
+    $(".calculate").bind("click touchstart", function(){
         var pa = parseFloat($("input[name='pa']:checked").val());
         var meal_count = parseInt($("input[id='meal-count']").val());
         if (known_bf == true) {
