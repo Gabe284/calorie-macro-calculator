@@ -86,7 +86,6 @@ $(document).ready(function(){
         */
 
     function calc_cals(known_bf, kg, pa, bf=undefined, age=undefined, ht=undefined, gender=undefined) {
-        console.log(known_bf, kg, pa, bf, age, ht, gender);
         if (known_bf == true) {
             return Math.round((370+(21.6*(kg-(kg*(bf/100)))))*pa);
         } else {
