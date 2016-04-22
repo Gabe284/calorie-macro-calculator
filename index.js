@@ -85,7 +85,7 @@ $(document).ready(function(){
     })
         */
 
-    function calc_cals(known_bf, kg, pa, bf=undefined, age=undefined, ht=undefined, gender=undefined) {
+    function calc_cals(known_bf, kg, pa, bf, age, ht, gender) {
         if (known_bf == true) {
             return Math.round((370+(21.6*(kg-(kg*(bf/100)))))*pa);
         } else {
@@ -97,7 +97,7 @@ $(document).ready(function(){
         }
     }; 
 
-    function calc_macros(cals, goal, known_bf, pa, bf=undefined, kg=undefined) {
+    function calc_macros(cals, goal, known_bf, pa, bf, kg) {
         var protein = 0;
         var carbs = 0;
         var fats = 0;
