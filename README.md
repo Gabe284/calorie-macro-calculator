@@ -10,4 +10,4 @@ The site implements:
 - Javascript
 - Jquery
 - Calculator formula based on TDEE and Macronutrient Algorithms
- 
+- Responsive Design allowing the site to respond to changes in viewport sizes.
