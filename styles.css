@@ -6,76 +6,58 @@ To Do:
 especially for blocks and sections
 - use media queries
  */
+*, *:before, *:after, {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
-  margin: 25px;
-  font-family: 'Droid Sans',Roboto, Arial;
+  font-family: 'Droid Sans', Roboto, Arial;
+  font-size: 100%;
   color: #000;
 }
 
-heading {
-  font-size: 20px;
-  display: block;
-  padding: 10px;	
-  /*
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
-	     */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
 }
 
-subheading {
-  font-size: 16px;
-  display: block;
-  padding: 10px;
+h2 {
+  font-size: 1.5em;
 }
 
 p {
-  color: #000;
-  font-family: Georgia;
-  font-size: 10px;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+ li {
+  padding: .5em;
 }
 
 main {
-  text-align: center;
-  padding: 25px;
-  max-width: 75%;
-  margin: auto;
-  display: block;
+  width: 90%;
+  margin: 0 auto;
+  clear: both;
 }
 
 section {
   text-align: center;
-  padding: 10px 10px;
-  max-width: 75%;
-  margin: auto;
-  display: block;
+  padding: 1em 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
 nav ul {
   letter-spacing: 1px;
   list-style-type: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
-}
-
-.cals-macs ul {
-  padding: 20px 20px;
-  list-style-type: none;
-  text-decoration: none;
-  text-align: center;
-}
-
-nav li {
   float: right;
+  margin: 1em;
 }
 
 nav li a {
-  display: block;
-  padding: 20px 20px;
+  font-size: .75em;
   list-style-type: none;
   text-decoration: none;
   text-align: center;
@@ -83,33 +65,28 @@ nav li a {
 
 button {
   border: none;
-  border-radius: 8px;
+  border-radius: .5em;
   background-color: #19b5fe;
-  font-size: 16px;
-  padding: 15px 15px;
-  margin: 2px;
+  font-size: 1em;
+  padding: 1em;
+  max-width: 75%;
+  margin: .25em auto;
   text-align: center;
   text-decoration: none;
+  display: block;
+}
+
+button#bf {
   display: inline-block;
-  width: auto;
-  float: center;
-  position: relative;
-  border-radius: 4px;
-  /*-webkit-box-shadow: 0px 6px 0px #1894cd, 0px 6px 25px #1894cd;
-  -moz-box-shadow: 0px 6px 0px #1894cd, 0px 6px 25px #1894cd;
-  box-shadow: 0px 6px 0px #1894cd, 0px 6px 25px #1894cd;
-  */
 }
 
 input {
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 12px;
+  border-radius: .25em;
+  padding: 1em;
   text-align: center;
   display: inline-block;
-  float: center;
-  position: relative;
-  margin: auto;
+  width: auto;
+  margin: 0 auto;
 }
 
 button:hover {
@@ -128,38 +105,52 @@ button:hover {
 .inactive {
   background-color: #808080;
   transition: all .75s ease;
+  -webkit-transition: all .75s ease;
+  -moz-transition: all .75s ease;
 }
 
 .pa-factor label {
   display: block;
 }
 
+.cals-macs ul {
+  list-style-type: none;
+  text-align: center;
+}
 /*
  Place media queries here. 
  Change when width < 435. Is in portrait mode
  Change when width < 773. Is in landscape mode.
  */
-@media (min-width: 500px) {
-  heading {
-    font-size: 32px; 
+@media (min-width: 400px) {
+  button, input {
+    display: inline-block;
   }
-  subheading {
-    font-size: 20px; 
-  }
-  p {
-    font-size: 16px;
+  #site-link {
+    font-size: 1.5em;
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 500px) {
   heading {
-    font-family: Chunkfive, Bevan, Ultra;
-    font-size: 40px; 
+    font-size: 2em; 
   }
   subheading {
-    font-size: 30px; 
+    font-size: 1.25em; 
+  }
+  button {
+    margin: .25em auto;
+  }
+}
+
+@media (min-width: 600px) {
+  heading {
+    font-size: 2.5em; 
+  }
+  subheading {
+    font-size: 1.875em; 
   }
   p {
-    font-size: 20px;
+    font-size: 1.25em;
   }
 }

@@ -6,26 +6,27 @@
     <!--
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     -->
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="http://keithalpichi.com" target="_blank">Built by Keith Alpichi</a></li>
+        <li id="site-link"><a href="http://keithalpichi.com" target="_blank">Built by Keith Alpichi</a></li>
       </ul>
     </nav>
     <main>
-      <heading>Calorie and Macronutrient Calculator</heading>
+      <h1>Calorie and Macronutrient Calculator</h1>
       <section class="fitness-goal">
-        <subheading>I want to</subheading>
-        <button class="bf-goal" value="lose body fat">lose body fat</button>
-        <button class="mg-goal" value="gain muscle">gain muscle</button>
-        <button class="ma-goal" value="maintain weight">maintain wt.</button>
+        <h2>I want to</h2>
+        <button class="bf-goal" type="button" value="lose body fat">lose body fat</button>
+        <button class="mg-goal" type="button "value="gain muscle">gain muscle</button>
+        <button class="ma-goal" type="button" value="maintain weight">maintain wt.</button>
       </section>
       <section class="bf">
-        <subheading>I know my body fat percentage</subheading>
-        <button class="yes">Yes</button>
-        <button class="no">No</button>
+        <h2>I know my body fat percentage</h2>
+        <button class="yes" id="bf" type="button">Yes</button>
+        <button class="no" id="bf" type="button">No</button>
       </section>
       <section class="body-fat-yes">
         <input type="number" id="body-fat" placeholder="Body Fat %">
@@ -42,20 +43,20 @@
         <label>Wt. <input type="number" id="weight-no" placeholder="Weight" min="1" max="999"></label>
       </section> 
       <section class="pa-factor">
-        <subheading>My fitness level is</subheading>
+        <h2>My fitness level is</h2>
         <label>Sedentary (No exercise) <input type="radio" name="pa" value="1.2"></label>
         <label>Lightly Active (1-2 days exercise/week) <input type="radio" name="pa"  value="1.375"></label>
         <label>Moderately Active (3-5 days exercise/week) <input type="radio" name="pa" value="1.55"></label>
         <label>Very Active (6-7 days exercise/week)<input type="radio" name="pa" value="1.725"></label>
         <label>Extremely Active (Athlete)<input type="radio" name="pa" value="1.9"></label>
-        <subheading>I eat this amount of meals a day</subheading>
+        <h2>I eat this amount of meals a day</h2>
         <label><input type="number" id="meal-count" placeholder="4" min="1" max="10"></label>
       </section>
       <section>
-        <button class="calculate">Calculate</button>
+        <button class="calculate" type="button">Calculate</button>
       </section>
       <section class="result">
-        <subheading>To <span class="goal-str"></span>, your daily intake should be</subheading>
+        <h2>To <span class="goal-str"></span>, your daily intake should be</h2>
         <ul class="cals-macs"></ul>
           <li class="cals"></li>
           <li class="protein"></li>
