@@ -1,28 +1,25 @@
 /*
 Author: Keith Alpichi
 Author URI: www.keithalpichi.com
-To Do:
-- change font px to em, use % when possible 
-especially for blocks and sections
-- use media queries
  */
 *, *:before, *:after, {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #fff;
-  font-family: 'Droid Sans', Roboto, Arial;
+  background-color: #494949;
+  font-family: 'Roboto', 'Droid Sans';
   font-size: 100%;
-  color: #000;
+  color: #e5e5e5;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 h2 {
+  margin: 0 0 .5em;
   font-size: 1.5em;
 }
 
@@ -31,36 +28,30 @@ p {
   line-height: 1.4;
 }
 
- li {
+label {
+  font-size: 1.25em;
+}
+
+ul {
+  margin: 0 0 .5em;
+}
+
+li {
   padding: .5em;
+  font-size: 1.25em;
 }
 
-main {
-  width: 90%;
-  margin: 0 auto;
-  clear: both;
+a {
+  text-decoration: none;
+  color: #1894cd;
 }
-
+ 
 section {
   text-align: center;
   padding: 1em 0;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-}
-
-nav ul {
-  letter-spacing: 1px;
-  list-style-type: none;
-  overflow: hidden;
-  float: right;
-  margin: 1em;
-}
-
-nav li a {
-  font-size: .75em;
-  list-style-type: none;
-  text-decoration: none;
-  text-align: center;
+  clear: both;
 }
 
 button {
@@ -68,12 +59,13 @@ button {
   border-radius: .5em;
   background-color: #19b5fe;
   font-size: 1em;
-  padding: 1em;
+  padding: 1.25em 2em;
   max-width: 75%;
-  margin: .25em auto;
+  margin: .5em auto;
   text-align: center;
   text-decoration: none;
   display: block;
+  color: #292929;
 }
 
 button#bf {
@@ -81,12 +73,16 @@ button#bf {
 }
 
 input {
-  border-radius: .25em;
-  padding: 1em;
+  border-radius: .75em;
   text-align: center;
   display: inline-block;
   width: auto;
-  margin: 0 auto;
+  padding: 1em 0;
+  margin: .25em;
+  background-color: #e3e3e3;
+  color: #383838;
+  font-family: 'Roboto', 'Droid Sans';
+  font-size: 1em;
 }
 
 button:hover {
@@ -103,7 +99,8 @@ button:hover {
 }
 
 .inactive {
-  background-color: #808080;
+  background-color: #585858;
+  color: #3e3e3e;
   transition: all .75s ease;
   -webkit-transition: all .75s ease;
   -moz-transition: all .75s ease;
@@ -117,40 +114,64 @@ button:hover {
   list-style-type: none;
   text-align: center;
 }
-/*
- Place media queries here. 
- Change when width < 435. Is in portrait mode
- Change when width < 773. Is in landscape mode.
- */
-@media (min-width: 400px) {
+
+#title {
+  text-transform: uppercase;
+}
+/*--------- Media Queries --------*/
+@media (min-width: 350px) {
   button, input {
-    display: inline-block;
+    font-size: 1.25em;
   }
-  #site-link {
+  button {
+    padding: 1.5em;
+  }
+  input {
+    padding: 1.25em 0;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2.25em;
+  }
+  label, li {
+    font-size: 1.75em;
+  }
+  p {
     font-size: 1.5em;
   }
 }
 
 @media (min-width: 500px) {
-  heading {
-    font-size: 2em; 
-  }
-  subheading {
-    font-size: 1.25em; 
-  }
   button {
-    margin: .25em auto;
+    padding: 1.5em 5em;
+  }
+  label, li {
+    font-size: 2em;
+  }
+  #title {
+    font-size: 3em;
   }
 }
 
-@media (min-width: 600px) {
-  heading {
-    font-size: 2.5em; 
+@media (min-width: 700px) {
+  #title {
+    font-size: 3.5em;
   }
-  subheading {
-    font-size: 1.875em; 
+}
+
+@media (min-width: 800px) {
+  #title {
+    font-size: 4em;
+    padding: 1em 0 0;
   }
-  p {
-    font-size: 1.25em;
+  button {
+    display: inline-block;
+    padding: 1.5em;
+  }
+  input {
+    display: inline-block;
+    padding: 1em 0;
   }
 }
