@@ -30,6 +30,7 @@ p {
 
 label {
   font-size: 1.25em;
+  min-width: 2em;
 }
 
 ul {
